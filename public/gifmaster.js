@@ -20,7 +20,7 @@ if (query) {
         var getSlug = function() {
                 var index = data.data.image_original_url.split('/');
                 return index[4];
-            }
+            };
             // console.log(data.data);
         if (data.data.image_original_url) {
             slug = getSlug(data.data.image_original_url);
@@ -33,7 +33,7 @@ if (query) {
             h1_query = decodeURIComponent(query).replace(/\+/g, ' ');
             if (h1_query.length >= 24) {
                 h1_query = h1_query.substring(0, 24) + '...';
-            }
+            };
             $("h1#your_query_search").text(h1_query);
             da_image_content = '<meta property="og:image" content="' + imgPath + '"/>' +
                 '<meta property="og:url" content="' + imgPath + '"/>' +
@@ -54,7 +54,7 @@ if (query) {
         var getSlug = function() {
             var index = data.data.image_original_url.split('/');
             return index[4];
-        }
+        };
         console.log(data.data);
         $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
         $("#link").attr("href", imgPath);
