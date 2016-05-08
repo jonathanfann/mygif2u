@@ -8,4 +8,4 @@ an app powered by [giphy](http://giphy.com/)
 
 or install forever and run `forever server.js`
 
-in the wild: [http://www.gr8-again.com/](gr8-again.com)
+in the wild: [gr8-again.com](http://gr8-again.com/])
