@@ -1,0 +1,22 @@
+{
+  "name": "gr8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jonathanfann/gr8-app.git"
+  },
+  "keywords": [
+    "gr8"
+  ],
+  "author": "jonathan fann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanfann/gr8-app/issues"
+  },
+  "homepage": "https://github.com/jonathanfann/gr8-app#readme"
+}
