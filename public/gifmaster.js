@@ -60,9 +60,6 @@ if (query) {
 $('#tile').click(function() {
   $('#gifmaster_it_up').toggleClass( "tiled" );
 });
-$('#tile2').click(function() {
-  $('#gifmaster_it_up').toggleClass( "tiled" );
-});
 
 // $( "#hello" ).click(function() {
 //   console.log('logs');
@@ -70,11 +67,7 @@ $('#tile2').click(function() {
 $('#reload').click(function() {
     location.reload();
 });
-$('#reload2').click(function() {
-    location.reload();
-});
 
 // $("#link").click(function() {
 //   window.open(data.data.image_original_url);
 // });
-
