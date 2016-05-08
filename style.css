@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+@import url(https://fonts.googleapis.com/css?family=Suranna);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+
+body {
+  background-color: white;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight:400;
+  background:yellow;
+}
+
+input.form-control {
+  height:40px;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  border:1px solid white;
+  -webkit-appearance: none;
+  outline:none;
+}
+
+input.form-control:focus {
+  outline:2px solid #0000FF;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+a.fa {
+  width:auto;
+  position:absolute;
+  transition: all ease-in-out 0.2s;
+  height:auto;
+  background:rgba(0,0,255,0.8);
+  right:30px;
+  color:white;
+  cursor:pointer;
+  font-size:15px;
+  text-decoration:none;
+  padding:20px;
+}
+
+#reload {
+  top:30px;
+}
+
+#link {
+  top:90px;
+}
+
+#tile {
+  top:150px;
+}
+
+a.fa:hover {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
+  transition: all ease-in-out 0.4s;
+}
+
+
+button.btn {
+  height:auto;
+  padding:10px;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+  outline:none !important;
+  border:none !Important;
+}
+
+.btn-primary {
+  background-color:#0000cc;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #0000FF;
+}
+
+#gifmaster_it_up {
+  height:100vh;
+  width:100%;
+  color:white;
+  text-align:center;
+  padding:0;
+  margin:0;
+  background-size:cover;
+  background-position:center;
+}
+
+h1#your_query_search {
+  font-family: 'Suranna', serif;
+  color: #0000FF;
+  text-transform:uppercase;
+  font-size:80px;
+  padding-top:100px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  text-overflow: ellipsis;
+}
+
+.hunnid {
+  width:100%;
+  position:fixed;
+  bottom:0;
+  left:0;
+  display:none;
+}
+
+.fiddy {
+  float:left;
+  width:33.3333333%;
+}
+
+.tiled {
+  background-size:auto !important;
+}
+
+a:hover {
+  transition: all ease-in-out 0.2s;
+  color:#0000FF;
+  background:white !important;
+}
+
+@media (max-width:1044px) {
+  .hidden-mobile {
+    display:none;
+  }
+  .hunnid {
+      display:block;
+  }
+  a.fa {
+    position:static;
+    width:100%;
+    text-shadow:none;
+    cursor:pointer;
+    color:white;
+    font-size:30px;
+    transition: all ease-in-out 0.2s;
+    text-decoration:none !Important;
+    padding:10px;
+  }
+  a.fa:hover {
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    color:#0000FF;
+  }
+  #reload2 {
+  background:rgba(0, 204, 0, 0.8);
+  }
+  
+  #link2 {
+    background:rgba(0, 0, 204, 0.8);
+  }
+  
+  #tile2 {
+    background:rgba(204, 0, 0, 0.8);
+  }
+}
