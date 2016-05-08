@@ -1,22 +1,22 @@
 {
-  "name": "gr8",
+  "name": "gr8-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "keep it simple",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jonathanfann/gr8-app.git"
+    "url": "git+https://github.com/jonathanfann/gr8-app.git"
   },
-  "keywords": [
-    "gr8"
-  ],
   "author": "jonathan fann",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jonathanfann/gr8-app/issues"
   },
-  "homepage": "https://github.com/jonathanfann/gr8-app#readme"
+  "homepage": "https://github.com/jonathanfann/gr8-app#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
