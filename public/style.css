@@ -32,34 +32,32 @@ input.form-control:focus {
 
 a.fa {
   width:auto;
-  position:absolute;
   transition: all ease-in-out 0.2s;
   height:auto;
-  background:rgba(0,0,255,0.8);
-  right:30px;
-  color:white;
+  background:white;
+  color:#0000FF;
   cursor:pointer;
   font-size:15px;
+  border-top:1px solid #0000FF;
   text-decoration:none;
+  padding:20px;
+  width:100%;
+}
+
+span.font {
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+.options {
+  margin-left:0 !important;
+  margin-right:0 !important;
+  border:1px solid yellow;
+  background:rgba(255, 255, 0, 0.5);;
   padding:20px;
 }
 
-#reload {
-  top:30px;
-}
-
-#link {
-  top:90px;
-}
-
-#tile {
-  top:150px;
-}
-
 a.fa:hover {
-  -ms-transform: rotate(180deg); /* IE 9 */
-  -webkit-transform: rotate(180deg); /* Safari */
-  transform: rotate(180deg);
+  color:red;
   transition: all ease-in-out 0.4s;
 }
 
@@ -102,6 +100,18 @@ h1#your_query_search {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   text-overflow: ellipsis;
+}
+
+h2 {
+  font-family: 'Suranna', serif;
+  color: #0000FF;
+  text-transform:uppercase;
+  font-size:30px;
+  padding-top:0px;
+  padding-bottom:15px;
+  margin-bottom:15px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
 
 .hunnid {
@@ -154,11 +164,11 @@ a:hover {
   #reload2 {
   background:rgba(0, 204, 0, 0.8);
   }
-  
+
   #link2 {
     background:rgba(0, 0, 204, 0.8);
   }
-  
+
   #tile2 {
     background:rgba(204, 0, 0, 0.8);
   }
