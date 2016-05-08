@@ -90,6 +90,11 @@ if (slugFromUrl) {
 // $('#tile').click(function() {
 //     if (tiled) {
 //         if (tiled == true) {
+// $('#tile').click(function() {
+//   if $('#gifmaster_it_up').hasClass( "tiled" ) {
+//     // $('#gifmaster_it_up').addClass( "tiled" );
+//   } else $('#gifmaster_it_up').addClass( "tiled" );
+// });
 //             savedUrl = '&tiled=true';
 //             var fullUrl = window.location.href + savedUrl;
 //             $(location).attr("href", fullUrl);
@@ -113,6 +118,6 @@ $('#reload').click(function() {
     location.reload();
 });
 
-$("#tiled").click(function() {
-  window.open(data.data.image_original_url);
+$('#tile').click(function() {
+  $('#gifmaster_it_up').toggleClass( "tiled" );
 });
