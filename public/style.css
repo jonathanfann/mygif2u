@@ -30,7 +30,7 @@ input.form-control:focus {
 }
 
 a {
-  color:blue;
+  color:#0000FF !important;
 }
 
 a.fa {
