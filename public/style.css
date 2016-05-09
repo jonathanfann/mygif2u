@@ -29,6 +29,9 @@ input.form-control:focus {
   padding: 0;
 }
 
+a {
+  color:blue;
+}
 
 a.fa {
   width:auto;
