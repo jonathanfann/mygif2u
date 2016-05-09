@@ -51,12 +51,12 @@ $(document).ready(function() {
     } else {
         var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=';
         $.getJSON(request, function(data) {
-            slug = getSlug(data.data.image_original_url);
-            imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
             getSlug = function() {
                 var index = data.data.image_original_url.split('/');
                 return index[4];
             };
+            slug = getSlug(data.data.image_original_url);
+            imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
             console.log(data.data);
             $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
             $("#link").attr("href", imgPath);
