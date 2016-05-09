@@ -123,11 +123,13 @@ h2 {
 }
 
 #twitt {
+  height:1px;
   opacity:0;
   transition:all ease-in-out 0.2s;
 }
 
 #twitt.un-hidden {
+  height:auto !important;
   opacity:1 !important;
   transition:all ease-in-out 0.2s;
 }
