@@ -11,12 +11,12 @@ $(document).ready(function() {
     }
     var da_image_content;
     var query = GetQueryStringParams('query');
+    var q = GetQueryStringParams('q');
     var savedUrl;
     var slug;
     var getSlug;
     var imgPath;
-    var h1_query;
-
+    var h1_query
     var slugFromUrl = GetQueryStringParams('slug');
     if (slugFromUrl) {
         imgPath = 'http://media0.giphy.com/media/' + slugFromUrl + '/giphy.gif';
