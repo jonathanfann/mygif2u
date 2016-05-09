@@ -24,6 +24,7 @@ $(document).ready(function() {
         if (h1_query.length >= 24) {
             h1_query = h1_query.substring(0, 24) + '...';
         };
+        $("h1#your_query_search").text(h1_query);
         $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
         if ($('#twitt').hasClass('un-hidden')) {
             $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl);
