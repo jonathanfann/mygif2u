@@ -31,7 +31,7 @@ $(document).ready(function() {
           /* todo: clean this up */
         } else {
           $('#twitt').addClass('un-hidden');
-          $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/' + savedUrl);
+          $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl);
         };
     } else {
     if (query) {
