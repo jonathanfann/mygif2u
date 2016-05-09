@@ -100,11 +100,18 @@ h1#your_query_search {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   text-overflow: ellipsis;
+  text-shadow:       1px 1px 0 #ffffff,
+                     2px 2px 0 #ffffff,
+                     3px 3px 0 #ffffff,
+                     4px 4px 0 #ffffff,
+                     5px 5px 0 #ffffff,
+                     6px 6px 0 #0000FF,
+                     7px 7px 0 #0000FF;
 }
 
 h2 {
   font-family: 'Suranna', serif;
-  color: #0000FF;
+  color: hsl(250,100%,100%);
   text-transform:uppercase;
   font-size:30px;
   padding-top:0px;
@@ -112,6 +119,17 @@ h2 {
   margin-bottom:15px;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
+  text-shadow:       1px 1px 0 #0000FF;
+}
+
+#twitt {
+  opacity:0;
+  transition:all ease-in-out 0.2s;
+}
+
+#twitt.un-hidden {
+  opacity:1 !important;
+  transition:all ease-in-out 0.2s;
 }
 
 .hunnid {
