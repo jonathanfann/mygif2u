@@ -12,13 +12,14 @@ $(document).ready(function() {
     var da_image_content;
     var query = GetQueryStringParams('query');
     var slug;
+    var getSlug;
     var imgPath;
     var h1_query;
     if (query) {
         // var request = 'http://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=dc6zaTOxFJmzC';
         var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + query;
         $.getJSON(request, function(data) {
-            var getSlug = function() {
+            getSlug = function() {
                 var index = data.data.image_original_url.split('/');
                 return index[4];
             };
@@ -52,7 +53,7 @@ $(document).ready(function() {
         $.getJSON(request, function(data) {
             slug = getSlug(data.data.image_original_url);
             imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
-            var getSlug = function() {
+            getSlug = function() {
                 var index = data.data.image_original_url.split('/');
                 return index[4];
             };
