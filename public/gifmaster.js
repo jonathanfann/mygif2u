@@ -43,7 +43,6 @@ $(document).ready(function() {
                 };
                 // console.log(data.data);
                 if (data.data.image_original_url) {
-                    $("h1#your_query_search").text(h1_query);
                     if ($('#twitt').hasClass('un-hidden')) {
                         /* todo: clean this up */
                     } else {
@@ -61,6 +60,7 @@ $(document).ready(function() {
                     imgPath = 'http://i.giphy.com/' + slug + '.gif';
                     $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
                     h1_query = decodeURIComponent(query).replace(/\+/g, ' ');
+                    $("h1#your_query_search").text(h1_query);
                     if (h1_query.length >= 24) {
                         h1_query = h1_query.substring(0, 24) + '...';
                     };

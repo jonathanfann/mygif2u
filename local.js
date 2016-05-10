@@ -6,7 +6,10 @@ app.use(express.static('public'));
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
-  //__dirname : It will resolve to your project folder.
+});
+
+app.get('/redux',function(req,res){
+  res.sendFile(path.join(__dirname+'/redux.html'));
 });
 
 app.listen(5006);
