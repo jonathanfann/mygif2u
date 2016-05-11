@@ -7,6 +7,8 @@
     <meta name="description" content="making gifs gr8 again">
     <title>gr8-again</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="/remodal.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/remodal-default-theme.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
@@ -25,19 +27,20 @@
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="row options">
                         <div class="col-xs-12">
-                            <h2>OPTIONS</h2>
+                            <h2 data-remodal-target="options">OPTIONS</h2>
                         </div>
-                        <div class="col-xs-6">
-                            <a class="fa fa-floppy-o fa-3x" aria-hidden="true" id="save"><span class="font"> save</span></a>
-                        </div>
-                        <div class="col-xs-6">
-                            <a id="tile" class="fa fa-clone" aria-hidden="true"><span class="font"> tile</span></a>
-                        </div>
-                        <div class="col-xs-12" id="twitt">
-                          <br />
-                            <a target="_blank" class="fa fa-twitter fa-3x" id="twitter-link" href="" data-size="large">
+                        <div class="remodal" data-remodal-id="options">
+                            <div class="col-xs-4">
+                                <a class="fa fa-floppy-o fa-3x" aria-hidden="true" id="save"><span class="font"> save</span></a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a id="tile" class="fa fa-clone" aria-hidden="true"><span class="font"> tile</span></a>
+                            </div>
+                            <div class="col-xs-4" id="twitt">
+                                <a target="_blank" class="fa fa-twitter fa-3x" id="twitter-link" href="" data-size="large">
                               Tweet This
                             </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,6 +51,7 @@
     <div id="da_image" style="opacity:0; position:relative; z-index:-3;"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="gifmaster.js"></script>
+    <script src="remodal.min.js"></script>
 </body>
 
 </html>

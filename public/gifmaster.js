@@ -27,7 +27,7 @@ $(document).ready(function() {
         $("h1#your_query_search").text(h1_query);
         $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
         if ($('#twitt').hasClass('un-hidden')) {
-            $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl);
+            $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl + '&q=' + q);
         } else {
             $('#twitt').addClass('un-hidden');
             $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl);
@@ -43,7 +43,6 @@ $(document).ready(function() {
                 };
                 // console.log(data.data);
                 if (data.data.image_original_url) {
-                    $("h1#your_query_search").text(h1_query);
                     if ($('#twitt').hasClass('un-hidden')) {
                         /* todo: clean this up */
                     } else {
@@ -64,6 +63,7 @@ $(document).ready(function() {
                     if (h1_query.length >= 24) {
                         h1_query = h1_query.substring(0, 24) + '...';
                     };
+                    $("h1#your_query_search").text(h1_query);
                     // da_image_content = '<meta property="og:image" content="' + imgPath + '"/>' +
                     //     '<meta property="og:url" content="' + imgPath + '"/>' +
                     //     '<meta property="og:title" content="' + h1_query + '">' +
@@ -104,52 +104,8 @@ $(document).ready(function() {
                         };
                     });
             });
-        // $('#gifmaster_it_up').css('background-image', 'url(http://i.giphy.com/fxVfzwgh78K9a.gif)');
     }
 };
-
-// $.urlParam = function(name){
-//     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-//     if (results==null){
-//        return null;
-//     }
-//     else{
-//        return results[1] || 0;
-//     }
-// }
-
-// var tiled = GetQueryStringParams('tiled');
-//
-// $('#tile').click(function() {
-//     if (tiled) {
-//         if (tiled == true) {
-// $('#tile').click(function() {
-//   if $('#gifmaster_it_up').hasClass( "tiled" ) {
-//     // $('#gifmaster_it_up').addClass( "tiled" );
-//   } else $('#gifmaster_it_up').addClass( "tiled" );
-// });
-//             savedUrl = '&tiled=true';
-//             var fullUrl = window.location.href + savedUrl;
-//             $(location).attr("href", fullUrl);
-//         } else {
-//             savedUrl = '&tiled=false';
-//             var fullUrl = window.location.href + savedUrl;
-//             $(location).attr("href", fullUrl);
-//         }
-//     } else {
-//         savedUrl = '&tiled=true';
-//         var fullUrl = window.location.href + savedUrl;
-//         $(location).attr("href", fullUrl);
-//     }
-// });
-
-
-// $( "#hello" ).click(function() {
-//   console.log('logs');
-// });
-$('#reload').click(function() {
-    location.reload();
-});
 var tiled = false;
 if ($('#gifmaster_it_up').hasClass("tiled")) {
     tiled = true;
