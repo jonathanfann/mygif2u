@@ -123,16 +123,15 @@ h2 {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   text-shadow:       1px 1px 0 #0000FF;
+  cursor:pointer;
 }
 
 #twitt {
-  height:1px;
   opacity:0;
   transition:all ease-in-out 0.2s;
 }
 
 #twitt.un-hidden {
-  height:auto !important;
   opacity:1 !important;
   transition:all ease-in-out 0.2s;
 }
@@ -161,12 +160,6 @@ a:hover {
 }
 
 @media (max-width:1044px) {
-  .hidden-mobile {
-    display:none;
-  }
-  .hunnid {
-      display:block;
-  }
   a.fa {
     position:static;
     width:100%;
@@ -194,5 +187,18 @@ a:hover {
 
   #tile2 {
     background:rgba(204, 0, 0, 0.8);
+  }
+}
+
+.mobile-only {
+  display:none;
+}
+
+@media (max-width:600px) {
+  .mobile-only {
+    display:block;
+  }
+  .hidden-mobile {
+    display:none;
   }
 }

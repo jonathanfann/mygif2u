@@ -25,9 +25,9 @@
                     <button class="form-control col-sm-6 btn btn-primary btn-md" type="submit">SEARCH</button>
                 </div>
                 <div class="col-sm-8 col-sm-offset-2">
-                    <div class="row options">
+                    <div class="row options hidden-mobile">
                         <div class="col-xs-12">
-                            <h2 data-remodal-target="options">OPTIONS</h2>
+                            <a class="fa fa-cog fa-3x" data-remodal-target="options"><span class="font"> options</a>
                         </div>
                         <div class="remodal" data-remodal-id="options">
                             <div class="col-xs-4">
@@ -38,9 +38,19 @@
                             </div>
                             <div class="col-xs-4" id="twitt">
                                 <a target="_blank" class="fa fa-twitter fa-3x" id="twitter-link" href="" data-size="large">
-                              Tweet This
+                              <span class="font">Tweet URL</span>
                             </a>
                             </div>
+                        </div>
+                      </div>
+                      <div class="row options mobile-only">
+                        <div class="col-xs-12">
+                            <a class="fa fa-floppy-o fa-3x" aria-hidden="true" id="save"><span class="font"> save</span></a>
+                            <br><span class="alert alert-success">saved at </span>
+                            <div id="twitt">
+                            <a target="_blank" class="fa fa-twitter fa-3x" id="twitter-link" href="" data-size="large">
+                          <span class="font">Tweet URL</span></a>
+                        </div>
                         </div>
                     </div>
                 </div>
