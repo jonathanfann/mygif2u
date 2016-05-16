@@ -85,17 +85,11 @@ $(document).ready(function() {
                 return index[4];
             };
             slug = getSlug(data.data.image_original_url);
-            imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
+            imgPath = 'http://i.giphy.com/' + slug + '.gif';
             console.log(data.data);
             $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
             $("#link").attr("href", imgPath);
             $("#link2").attr("href", imgPath);
-
-            if ($('#twitt').hasClass('un-hidden')) {
-                /* todo: clean this up */
-            } else {
-                $('#twitt').removeClass('un-hidden')
-            };
             slug = getSlug(data.data.image_original_url);
             console.log(slug);
             $('#save').click(function() {
