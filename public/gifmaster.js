@@ -9,6 +9,11 @@ $(document).ready(function() {
             }
         }
     }
+    var tiled = false;
+    var tiledQuery = GetQueryStringParams('tiled');
+    if (tiledQuery) {
+        tiled = true;
+    }
     var da_image_content;
     var query = GetQueryStringParams('query');
     var q = GetQueryStringParams('q');
@@ -26,87 +31,80 @@ $(document).ready(function() {
         };
         $("h1#your_query_search").text(h1_query);
         $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
-        if ($('#twitt').hasClass('un-hidden')) {
-            $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl + '&q=' + q);
-        } else {
-            $('#twitt').addClass('un-hidden');
-            $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=Check+this+gif+site+out:+http://gr8-again.com/?slug=' + slugFromUrl);
+        $('.saved').html("<h2>Saved</h2>");
+        if ($('#saved').hasClass('hidden')) {
+            $('#saved').removeClass('hidden');
+            $('#save').addClass('hidden');
         };
-    } else {
-        if (query) {
-            // var request = 'http://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=dc6zaTOxFJmzC';
-            var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + query;
-            $.getJSON(request, function(data) {
-                getSlug = function() {
-                    var index = data.data.image_original_url.split('/');
-                    return index[4];
-                };
-                // console.log(data.data);
-                if (data.data.image_original_url) {
-                    if ($('#twitt').hasClass('un-hidden')) {
-                        /* todo: clean this up */
-                    } else {
-                        $('#twitt').removeClass('un-hidden')
-                    };
-                    slug = getSlug(data.data.image_original_url);
-                    console.log(slug);
-                    $('#save').click(function() {
-                        savedUrl = '?slug=' + slug + '&q=' + query;
-                        $(location).attr("href", savedUrl);
-                        if ($('#twitt').hasClass('un-hidden')) {} else {
-                            $('#twitt').addClass('un-hidden')
-                        };
-                    });
-                    imgPath = 'http://i.giphy.com/' + slug + '.gif';
-                    $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
-                    h1_query = decodeURIComponent(query).replace(/\+/g, ' ');
-                    if (h1_query.length >= 24) {
-                        h1_query = h1_query.substring(0, 24) + '...';
-                    };
-                    $("h1#your_query_search").text(h1_query);
-                    // da_image_content = '<meta property="og:image" content="' + imgPath + '"/>' +
-                    //     '<meta property="og:url" content="' + imgPath + '"/>' +
-                    //     '<meta property="og:title" content="' + h1_query + '">' +
-                    //     '<meta property="og:description" content="' + h1_query + '">' +
-                    //     '<meta property="twitter:image" content="' + imgPath + '">';
-                    // $('head').append(da_image_content);
+} else {
+    if (query) {
+        // var request = 'http://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=dc6zaTOxFJmzC';
+        var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + query;
+        $.getJSON(request, function(data) {
+            getSlug = function() {
+                var index = data.data.image_original_url.split('/');
+                return index[4];
+            };
+            // console.log(data.data);
+            if (data.data.image_original_url) {
+                if ($('#twitt').hasClass('un-hidden')) {
+                    /* todo: clean this up */
                 } else {
-                    $('#gifmaster_it_up').css('background-image', 'url(http://i.giphy.com/i8HONP9VaTV6w.gif)');
-                    $("h1#your_query_search").text('I got nuthin');
-                }
-            });
-        } else {
-            var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=';
-            $.getJSON(request, function(data) {
-                    getSlug = function() {
-                        var index = data.data.image_original_url.split('/');
-                        return index[4];
-                    };
-                    slug = getSlug(data.data.image_original_url);
-                    imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
-                    console.log(data.data);
-                    $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
-                    $("#link").attr("href", imgPath);
-                    $("#link2").attr("href", imgPath);
+                    $('#twitt').removeClass('un-hidden')
+                };
+                slug = getSlug(data.data.image_original_url);
+                console.log(slug);
+                $('#save').click(function() {
+                    savedUrl = '?slug=' + slug + '&q=' + query;
+                    $(location).attr("href", savedUrl);
+                    $('#saved').removeClass('hidden');
+                });
+                imgPath = 'http://i.giphy.com/' + slug + '.gif';
+                $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
+                h1_query = decodeURIComponent(query).replace(/\+/g, ' ');
+                if (h1_query.length >= 24) {
+                    h1_query = h1_query.substring(0, 24) + '...';
+                };
+                $("h1#your_query_search").text(h1_query);
+                // da_image_content = '<meta property="og:image" content="' + imgPath + '"/>' +
+                //     '<meta property="og:url" content="' + imgPath + '"/>' +
+                //     '<meta property="og:title" content="' + h1_query + '">' +
+                //     '<meta property="og:description" content="' + h1_query + '">' +
+                //     '<meta property="twitter:image" content="' + imgPath + '">';
+                // $('head').append(da_image_content);
+            } else {
+                $('#gifmaster_it_up').css('background-image', 'url(http://i.giphy.com/i8HONP9VaTV6w.gif)');
+                $("h1#your_query_search").text('I got nuthin');
+            }
+        });
+    } else {
+        var request = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=';
+        $.getJSON(request, function(data) {
+            getSlug = function() {
+                var index = data.data.image_original_url.split('/');
+                return index[4];
+            };
+            slug = getSlug(data.data.image_original_url);
+            imgPath = 'http://media0.giphy.com/media/' + slug + '/giphy.gif';
+            console.log(data.data);
+            $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
+            $("#link").attr("href", imgPath);
+            $("#link2").attr("href", imgPath);
 
-                    if ($('#twitt').hasClass('un-hidden')) {
-                        /* todo: clean this up */
-                    } else {
-                        $('#twitt').removeClass('un-hidden')
-                    };
-                    slug = getSlug(data.data.image_original_url);
-                    console.log(slug);
-                    $('#save').click(function() {
-                        savedUrl = '?slug=' + slug;
-                        $(location).attr("href", savedUrl);
-                        if ($('#twitt').hasClass('un-hidden')) {} else {
-                            $('#twitt').addClass('un-hidden')
-                        };
-                    });
+            if ($('#twitt').hasClass('un-hidden')) {
+                /* todo: clean this up */
+            } else {
+                $('#twitt').removeClass('un-hidden')
+            };
+            slug = getSlug(data.data.image_original_url);
+            console.log(slug);
+            $('#save').click(function() {
+                savedUrl = '?slug=' + slug + 'q=gr8';
+                $(location).attr("href", savedUrl);
             });
+        });
     }
 };
-var tiled = false;
 if ($('#gifmaster_it_up').hasClass("tiled")) {
     tiled = true;
 } else {
