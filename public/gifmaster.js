@@ -24,7 +24,7 @@ $(document).ready(function() {
     var h1_query
     var slugFromUrl = GetQueryStringParams('slug');
     if (slugFromUrl) {
-        imgPath = 'http://media0.giphy.com/media/' + slugFromUrl + '/giphy.gif';
+        imgPath = 'http://i.giphy.com/' + slugFromUrl + '.gif';
         h1_query = decodeURIComponent(q).replace(/\+/g, ' ');
         if (h1_query.length >= 24) {
             h1_query = h1_query.substring(0, 24) + '...';
@@ -88,12 +88,10 @@ $(document).ready(function() {
             imgPath = 'http://i.giphy.com/' + slug + '.gif';
             console.log(data.data);
             $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
-            $("#link").attr("href", imgPath);
-            $("#link2").attr("href", imgPath);
             slug = getSlug(data.data.image_original_url);
             console.log(slug);
             $('#save').click(function() {
-                savedUrl = '?slug=' + slug + 'q=gr8';
+                savedUrl = '?slug=' + slug + '&q=gr8';
                 $(location).attr("href", savedUrl);
             });
         });
