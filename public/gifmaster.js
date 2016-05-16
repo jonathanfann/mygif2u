@@ -9,11 +9,11 @@ $(document).ready(function() {
             }
         }
     }
-    var tiled = false;
+    var tiled;
     var tiledQuery = GetQueryStringParams('tiled');
     if (tiledQuery) {
-        tiled = true;
-    }
+        $('#gifmaster_it_up').addClass("tiled");
+    };
     var da_image_content;
     var query = GetQueryStringParams('query');
     var q = GetQueryStringParams('q');
@@ -97,11 +97,11 @@ $(document).ready(function() {
         });
     }
 };
-if ($('#gifmaster_it_up').hasClass("tiled")) {
-    tiled = true;
-} else {
-    tiled = false;
-}
+// if ($('#gifmaster_it_up').hasClass("tiled")) {
+//     tiled = true;
+// } else {
+//     tiled = false;
+// }
 $('#tile').click(function() {
     if (tiled) {
         tiled = false;
