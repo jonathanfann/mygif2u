@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="making gifs gr8 again">
     <title>gr8-again</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
@@ -27,7 +29,7 @@
                         <div class="col-xs-12">
                             <a class="fa fa-floppy-o fa-3x" aria-hidden="true" id="save"><span class="font"> save</span></a>
                             <div id="saved" class="hidden">
-                              <span class="saved"></span>
+                              <p id="copy"></p>
                         </div>
                         </div>
                     </div>
@@ -35,6 +37,7 @@
             </form>
 
         </div>
+        <img id="powered" src="/PoweredBy_200px-Black_HorizText.png">
     </div>
     <div id="da_image" style="opacity:0; position:relative; z-index:-3;"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

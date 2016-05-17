@@ -22,6 +22,7 @@ $(document).ready(function() {
     var getSlug;
     var imgPath;
     var h1_query
+    var thisUrl = window.location.href;
     var slugFromUrl = GetQueryStringParams('slug');
     if (slugFromUrl) {
         imgPath = 'http://i.giphy.com/' + slugFromUrl + '.gif';
@@ -31,7 +32,8 @@ $(document).ready(function() {
         };
         $("h1#your_query_search").text(h1_query);
         $('#gifmaster_it_up').css('background-image', 'url(' + imgPath + ')');
-        $('.saved').html("<h2>Saved</h2>");
+        // $('.saved').html("<h2>Saved</h2>");
+        $('#copy').html(thisUrl);
         if ($('#saved').hasClass('hidden')) {
             $('#saved').removeClass('hidden');
             $('#save').addClass('hidden');
