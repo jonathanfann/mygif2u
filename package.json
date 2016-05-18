@@ -14,7 +14,10 @@
   },
   "homepage": "https://github.com/jonathanfann/gr8-app#readme",
   "dependencies": {
-    "clipboard": "^1.5.10",
-    "express": "^4.13.4"
+    "body-parser": "^1.15.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "giphy-api": "^1.1.15",
+    "request": "^2.72.0"
   }
 }
