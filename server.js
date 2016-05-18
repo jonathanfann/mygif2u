@@ -1,6 +1,8 @@
-var express = require("express");
+var express = require('express');
+var bodyParser = require('body-parser')
 var app     = express();
-var path    = require("path");
+var path    = require('path');
+var giphy = require('giphy-api')(process.env.GIPHY_API_KEY);
 
 app.use(express.static('public'));
 
@@ -8,13 +10,12 @@ app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
   //__dirname : It will resolve to your project folder.
 });
-
-app.post('/make-gr8', bodyParser.json(), function(req, res) {
-  giphy.search({
-    q: req.body.searchTerm,
-    rating: 'pg'
-  }, function(err, res) {
-    res.send(res);
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.post('/make-gr8', urlencodedParser, function(req, res) {
+  giphy.random({
+    tag: req.body.searchTerm || 'peepee'
+  }, function(err, output) {
+    res.send(output.data);
   });
 });
 
