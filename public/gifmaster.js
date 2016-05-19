@@ -29,6 +29,9 @@ $(document).ready(function() {
     $('#save').click(function() {
       var query = $('#query').val();
       savedUrl = '?slug=' + GIPHY_ID + '&q=' + query;
+      if tiled = true {
+        savedUrl = savedUrl.concat('&tiled=true');
+      }
       $(location).attr("href", savedUrl);
       $('#saved').removeClass('hidden');
     });

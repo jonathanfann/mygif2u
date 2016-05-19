@@ -19,6 +19,6 @@ app.post('/make-gr8', urlencodedParser, function(req, res) {
   });
 });
 
-app.listen(process.env.GR8_PORT || 80);
+app.listen(5006);
 
 console.log('Running at http://localhost:5006');
