@@ -13,7 +13,8 @@ app.get('/',function(req,res){
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.post('/make-gr8', urlencodedParser, function(req, res) {
   giphy.random({
-    tag: req.body.searchTerm || 'peepee'
+    rating: 'pg-13',
+    tag: req.body.searchTerm || ''
   }, function(err, output) {
     res.send(output.data);
   });
