@@ -11,6 +11,7 @@ $(document).ready(function() {
     if (slugFromUrl) {
         SetGiph(slugFromUrl, q, tiledQuery);
         $('#copy').html(thisUrl);
+        $('#copyimage').html('<img src="http://i.giphy.com/' + slugFromUrl + '.gif" /><p>Hold to Copy Image</p>');
         if ($('#saved').hasClass('hidden')) {
             $('#saved').removeClass('hidden');
             $('#save').addClass('hidden');

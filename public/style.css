@@ -2,7 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Suranna);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
 
+html {
+  overflow:hidden;
+  width:100vw;
+  height:100vh;
+}
+
 body {
+  overflow:hidden;
+  width:100vw;
+  height:100vh;
   background-color: white;
   color: white;
   font-family: 'Work Sans', sans-serif;
@@ -21,12 +30,37 @@ input.form-control {
 }
 
 #copy {
+  word-wrap:break-word;
   margin-top:10px;
   border:1px dotted #0000FF;
   background: white;
   padding:5px;
   color:#0000FF;
   font-family:'Suranna';
+}
+
+#copyimage {
+  display:none;
+  margin-top:10px;
+  border:1px dotted #0000FF;
+  background: white;
+  padding:5px;
+  color:#0000FF;
+  font-family:'Suranna';
+}
+
+#copyimage p {
+  margin:4px 0 6px;
+}
+
+#copyimage img {
+  opacity:0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:5;
 }
 
 #powered {
@@ -173,13 +207,17 @@ a:hover {
 }
 
 @media (max-width:1044px) {
+  h1#your_query_search {
+    padding-top:30px;
+    font-size:70px;
+  }
   a.fa {
     position:static;
     width:100%;
     text-shadow:none;
     cursor:pointer;
     color:white;
-    font-size:30px;
+    font-size:16px;
     transition: all ease-in-out 0.2s;
     text-decoration:none !Important;
     padding:10px;
@@ -208,6 +246,16 @@ a:hover {
 }
 
 @media (max-width:600px) {
+  #copyimage {
+    display:block;
+  }
+  #copy {
+    display:none;
+  }
+  h1#your_query_search {
+    padding-top:20px;
+    font-size:60px;
+  }
   .mobile-only {
     display:block;
   }
