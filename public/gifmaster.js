@@ -9,6 +9,8 @@ $(document).ready(function() {
     /* saved query */
     var slugFromUrl = GetQueryStringParams('slug');
     if (slugFromUrl) {
+        $('#query').addClass('hidden');
+        $('#button').text('Reset');
         SetGiph(slugFromUrl, q, tiledQuery);
         $('#copy').html(thisUrl);
         $('#copyimage').html('<img src="http://i.giphy.com/' + slugFromUrl + '.gif" /><p>Hold to Copy Image</p>');
@@ -37,6 +39,8 @@ $(document).ready(function() {
       $('#saved').removeClass('hidden');
     });
     $('#queryForm').submit(function(event) {
+      $('#button').text('Search');
+      $('#query').removeClass('hidden');
       var queryVal = $('#query').val();
       MakeItGr8Again(queryVal);
       var url = $(location).attr('href');
