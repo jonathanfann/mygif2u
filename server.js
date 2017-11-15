@@ -20,6 +20,6 @@ app.post('/make-gr8', urlencodedParser, function(req, res) {
   });
 });
 
-app.listen(420);
+app.listen(80);
 
-console.log("Running at 420");
+console.log("http://mygif2u.herokuapp.com");
