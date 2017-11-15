@@ -20,6 +20,6 @@ app.post('/make-gr8', urlencodedParser, function(req, res) {
   });
 });
 
-app.listen(80);
+app.listen(process.env.PORT);
 
-console.log("http://mygif2u.herokuapp.com");
+console.log("http://mygif2u.herokuapp.com @ ", process.env.PORT);
