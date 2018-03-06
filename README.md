@@ -1,6 +1,4 @@
-#gr8-app
-
-making gifs gr8 again
+#mygif2u
 
 an app powered by [giphy](http://giphy.com/)
 
